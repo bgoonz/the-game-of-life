@@ -45,7 +45,7 @@ Gol.prototype.turn = function () {
       }
 
       // Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction.
-      for (var j = n.dead.length; j--; ) {
+      for (var j = n.dead.length; j--;) {
         var cell = n.dead[j];
         if (
           !processed[cell] &&
@@ -61,7 +61,7 @@ Gol.prototype.turn = function () {
 
   this.alive = {};
   this.grid.clear();
-  for (var i = nalive.length; i--; ) {
+  for (var i = nalive.length; i--;) {
     var c = nalive[i];
     this.markAlive(c[0], c[1]);
   }
@@ -77,7 +77,7 @@ Gol.prototype.deadOrAlive = function (cells) {
 
   var s = { true: "alive", false: "dead" };
 
-  for (var i = cells.length; i--; ) {
+  for (var i = cells.length; i--;) {
     result[s[this.isAlive(cells[i][0], cells[i][1])]].push(cells[i]);
   }
   return result;
